@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 const MediaRow = (props) => {
-  const {item} = props;
+  const {item, selectedItem, setSelectedItem} = props;
   return (
     <tr key={item.media_id}>
       <td>
@@ -11,6 +11,10 @@ const MediaRow = (props) => {
       <td>{new Date(item.created_at).toLocaleString('fi-FI')}</td>
       <td>{item.filesize}</td>
       <td>{item.media_type}</td>
+
+      <td>
+        <button onClick={() => setSelectedItem(item)}>View</button>
+      </td>
     </tr>
   );
 };
