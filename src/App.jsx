@@ -1,5 +1,5 @@
 import {Route, BrowserRouter, Routes} from 'react-router';
-import Layout from './views/Layout';
+import Layout from './components/Layout';
 import Home from './views/Home';
 
 const App = () => {
@@ -14,3 +14,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
+
+export default App;
