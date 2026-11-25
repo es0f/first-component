@@ -1,6 +1,8 @@
 import {Route, BrowserRouter, Routes} from 'react-router';
 import Layout from './components/Layout';
 import Home from './views/Home';
+import Login from './views/login';
+import Logout from './views/logout';
 
 const App = () => {
   return (
@@ -8,7 +10,8 @@ const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          {/* TODO: add missing routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
         </Route>
       </Routes>
     </BrowserRouter>
